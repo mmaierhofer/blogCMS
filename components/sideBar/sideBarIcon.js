@@ -6,7 +6,7 @@ export default function NavbarIcon({icon, tooltip}) {
         <>
             <div className="sidebar-icon group">
                 <FontAwesomeIcon icon={icon} />
-                <span className="sidebar-tooltip scale-0">
+                <span className="sidebar-tooltip group-hover:scale-100">
                     {tooltip}
                 </span>
             </div>
