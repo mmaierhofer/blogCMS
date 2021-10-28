@@ -3,7 +3,7 @@ import React from "react";
 export default function Navbar() {
     return (
         <>
-            <div className={"h-full bg-black-900 w-20"}>
+            <div className={"w-20 h-screen bg-gray-800"}>
                 Navbar
             </div>
         </>
