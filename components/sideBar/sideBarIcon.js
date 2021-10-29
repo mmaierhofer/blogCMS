@@ -14,7 +14,6 @@ export default function SideBarIcon({icon, tooltip, link}) {
                 </span>
             </div>
         </Link>
-            
         </>
     )
 }
