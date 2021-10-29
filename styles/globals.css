@@ -17,6 +17,6 @@
   }
 
   .page {
-    @apply w-screen h-screen pl-16;
+    @apply w-screen h-screen pl-16 bg-lightPrimary text-white;
   }
 }
