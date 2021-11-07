@@ -12,7 +12,8 @@ module.exports = {
       lightPrimary: '#0a2c44',
       secondary: '#1BA098',
       ternary: '#DEB992',
-      white: '#ffffff'
+      white: '#ffffff',
+      black: '#000000'
     }
   },
   variants: {
