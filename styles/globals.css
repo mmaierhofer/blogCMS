@@ -17,6 +17,10 @@
   }
 
   .page {
-    @apply w-screen h-screen pl-16 bg-lightPrimary text-white;
+    @apply w-screen h-screen pl-16 bg-lightGray text-primary;
+  }
+
+  .indicator {
+    @apply border-l-2 border-secondary h-3/4  transition-all duration-300 origin-left transform;
   }
 }

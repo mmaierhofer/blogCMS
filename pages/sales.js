@@ -1,9 +1,10 @@
 import React from "react";
+import Header from "../components/header/header";
 export default function Sales() {
     return (
         <>
         <div className="page">
-            salessss
+            <Header title="Sales" />
         </div>
         </>
     )

@@ -6,37 +6,50 @@ import { AuthContext, AuthProvider } from '../contexts/authContext';
 import { isEmpty } from '../helper/utilityFunctions';
 
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+import LoadingScreen from '../components/loadingScreen/loadingScreen';
 
 
 export default function MyApp({ Component, pageProps }) {
 
   const [user, setUser] = useState();
+  const [loading, setLoading] = useState(true);
  
   const auth = getAuth();
   onAuthStateChanged(auth, (user) => {
+    setLoading(false);
     if (user) {
       setUser(user);
     } else {
       setUser(null);
     }
   });
-
-  if (user) {
-    return (
-      <AuthProvider>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </AuthProvider>
-      
-  )
+  if(!loading) {
+    if (user) {
+      return (
+        <AuthProvider>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </AuthProvider>
+        
+    )
+    }
+    else {
+      return (
+        <AuthProvider>
+          <Login />
+        </AuthProvider>
+    )
+    }
+  
   }
   else {
     return (
-      <AuthProvider>
-        <Login />
-      </AuthProvider>
-  )
+      <>
+        <LoadingScreen />
+      </>
+    )
   }
+    
 }
 

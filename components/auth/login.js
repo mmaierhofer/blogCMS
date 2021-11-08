@@ -3,7 +3,6 @@ import { useState } from "react";
 import {
   signInWithEmailAndPassword,
   onAuthStateChanged,
-  signOut,
 } from "firebase/auth";
 
 
@@ -32,9 +31,7 @@ export default function Login() {
         }
       };
     
-      const logout = async () => {
-        await signOut(auth);
-      };
+      
   
     return (
         <>
