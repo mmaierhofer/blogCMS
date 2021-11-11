@@ -12,7 +12,7 @@ export default function Home() {
         <Header title="anything" />
       </div>
       <div className="flex flex-col w-full h-5/6">
-        <div className="flex flex-row h-1/6">
+        <div className="flex flex-row h-40">
           <div className="w-1/3 p-5">
             <SalesWidget earnings={"420,50"} title={"Earnings this month"}/>
           </div>
@@ -24,10 +24,10 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-row w-full h-3/6">
-          <div className="w-2/3 p-5">
+          <div className="w-3/5 p-5">
             <PrognoseWidget />
           </div>
-          <div className="w-1/3 p-5">
+          <div className="w-2/5 p-5">
             <OrderStatusWidget />
           </div>
         </div>
