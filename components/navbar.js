@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { faHome, faStream, faEuroSign, faUsers, faCog, faQuestion, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import SideBarIcon from "./sideBar/sideBarIcon";
-import LogoutModule from './auth/LogoutModule';
+import LogoutModule from './auth/logoutModule';
 import { useRouter } from 'next/router'
 
 export default function Navbar() {
