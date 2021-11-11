@@ -4,7 +4,7 @@ export default function Settings() {
     return (
         <>
         <div className="page">
-            <Header title="Settings" />
+            <Header title="settings" />
         </div>
         </>
     )

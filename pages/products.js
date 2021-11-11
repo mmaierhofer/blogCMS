@@ -4,7 +4,7 @@ export default function Products() {
     return (
         <>
         <div className="page">
-            <Header title="Products" />
+            <Header title="products" />
         </div>
         </>
     )

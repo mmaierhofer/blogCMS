@@ -18,7 +18,7 @@ module.exports = {
       green: '#28713e',
       greenHover: '#205a32',
       gray: '#a9a9a9',
-      lightGray: '#d3d3d3'
+      lightGray: '#f3f3f3'
     }
   },
   variants: {

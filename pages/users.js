@@ -4,7 +4,7 @@ export default function Users() {
     return (
         <>
         <div className="page">
-            <Header title="Users" />
+            <Header title="users" />
         </div>
         </>
     )

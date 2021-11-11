@@ -4,7 +4,7 @@ export default function Sales() {
     return (
         <>
         <div className="page">
-            <Header title="Sales" />
+            <Header title="sales" />
         </div>
         </>
     )

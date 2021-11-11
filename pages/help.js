@@ -4,7 +4,7 @@ export default function Help() {
     return (
         <>
         <div className="page">
-            <Header title="Help" />
+            <Header title="help" />
         </div>
         </>
     )
