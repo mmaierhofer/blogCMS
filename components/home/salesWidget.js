@@ -5,7 +5,7 @@ import React from "react";
 export default function SalesWidget({earnings, title}) {
     return(
         <>
-            <div className="bg-white h-full shadow-lg flex flex-row justify-between">
+            <div className="widget flex-row justify-between">
                 <div className="h-full w-1/2 flex flex-col justify-center pl-8 ">
                     <div className="text-lightPrimary text-lg font-bold">{earnings} <FontAwesomeIcon icon={faEuroSign}/>
                     </div>

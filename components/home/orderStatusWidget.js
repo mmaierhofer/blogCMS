@@ -1,7 +1,7 @@
 import { faDotCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { PieChart, Pie, Legend } from 'recharts';
+import { PieChart, Pie } from 'recharts';
 
 const data01 = [
     {
@@ -33,7 +33,7 @@ const data01 = [
 export default function OrderStatusWidget() {
     return(
         <>
-        <div className="bg-white h-full shadow-lg flex flex-col justify-center items-center">
+        <div className="flex-col justify-center items-center widget">
             <div className="bg-white w-full h-5/6 flex justify-center items-center">
                 <div className="left-0 top-0 h-full pt-5 flex justify-start w-1/4 pl-5 text-lightPrimary text-md font-bold">Order Status</div>
                 <div className="w-2/4">

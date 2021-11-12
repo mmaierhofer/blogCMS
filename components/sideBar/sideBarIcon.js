@@ -7,8 +7,6 @@ import { useRouter } from "next/router";
 export default function SideBarIcon({icon, tooltip, link, currentPath}) {
     
     const router = useRouter();
-    console.log(router.route);
-    console.log(link);
     
     return (
         <>

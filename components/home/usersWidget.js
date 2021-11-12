@@ -3,7 +3,7 @@ import React from "react";
 export default function UsersWidget() {
     return(
         <>
-             <div className="bg-white h-full shadow-lg">
+             <div className="widget">
                 Users
             </div>
         </>
