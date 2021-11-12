@@ -6,7 +6,11 @@ module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      width: {
+        '98/100': '97%'
+      }
+    },
     colors: {
       primary: '#22277A',
       lightPrimary: '#4066E0',

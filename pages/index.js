@@ -1,4 +1,5 @@
 import Header from '../components/header/header'
+import OpenOrdersWidget from '../components/home/openOrdersWidget'
 import OrderStatusWidget from '../components/home/orderStatusWidget'
 import ProductWidget from '../components/home/productWidget'
 import PrognoseWidget from '../components/home/prognoseWidget'
@@ -13,14 +14,14 @@ export default function Home() {
       </div>
       <div className="flex flex-col w-full h-5/6">
         <div className="flex flex-row h-40">
+        <div className="w-1/3 p-5">
+            <OpenOrdersWidget number={"4"} title={"Open orders"}/>
+          </div>
           <div className="w-1/3 p-5">
             <SalesWidget earnings={"420,50"} title={"Earnings this month"}/>
           </div>
           <div className="w-1/3 p-5">
             <SalesWidget earnings={"2059"} title={"Earnings this year"}/>
-          </div>
-          <div className="w-1/3 p-5">
-            <SalesWidget earnings={"12806"} title={"Total Earnings"}/>
           </div>
         </div>
         <div className="flex flex-row w-full h-3/6">
