@@ -25,6 +25,6 @@
   }
 
   .widget {
-    @apply bg-white h-full shadow-lg flex;
+    @apply bg-white h-full shadow-md flex hover:shadow-xl cursor-pointer;
   }
 }
