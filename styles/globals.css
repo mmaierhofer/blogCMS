@@ -27,4 +27,21 @@
   .widget {
     @apply bg-white h-full shadow-md flex hover:shadow-xl cursor-pointer;
   }
+
+  .listItem {
+    @apply h-full hover:shadow-md pl-12 pr-12 cursor-pointer border-t-2 hover:border-lightGray border-white;
+  }
+
+  .promo-button {
+    @apply w-2/3 justify-start shadow-inner items-center flex bg-lightPrimary hover:bg-primary hover:text-white text-white rounded-full p-1
+    transition-all duration-300 ease-out cursor-pointer;
+  }
+
+  .action-button {
+    @apply bg-lightGray shadow-inner p-1 w-8 h-8 flex items-center justify-center text-darkGray rounded-full hover:bg-gray hover:text-lightGray transition-all duration-500 ease-out cursor-pointer;
+  }
+
+  .filter {
+    @apply bg-white h-10 flex items-center justify-between pl-4 pr-4 rounded-full shadow-inner cursor-pointer;
+  }
 }

@@ -4,35 +4,20 @@ import { collection, query, where, getDocs } from "firebase/firestore";
 import { db } from '../firebase/clientApp'
 import ProductHeader from "../components/products/productHeader";
 import ProductList from "../components/products/productList";
+import ProductFilter from "../components/products/productFilter";
+import { addProductsToCategories } from "../helper/utilityFunctions";
 
 
 export default function Products() {
 
     const [products, setProducts] = useState();
     const [categories, setCategories] = useState([])
-    const [active, setActive] = useState(true);
+    const [activeTab, setActiveTab] = useState("products");
 
     useEffect(() => {
         getCategories();
+        getProducts();
     }, [])
-
-    async function getProducts(categoryId) {
-        const q = query(collection(db, "products"));
-
-        const productBuffer = [];
-
-        const querySnapshot = await getDocs(q);
-        querySnapshot.forEach((doc) => {
-          // doc.data() is never undefined for query doc snapshots
-          let currentProduct = {
-            "id": doc.id,
-            "name": doc.data().name,
-            "category": doc.data()
-        }
-        productBuffer.push(currentProduct);
-        });
-        return(productBuffer);
-    }
 
     async function getCategories() {
         const q = query(collection(db, "category"));
@@ -43,35 +28,43 @@ export default function Products() {
 
         querySnapshot.forEach((doc) => {
             // doc.data() is never undefined for query doc snapshots
-
-            products = getProducts(doc.id);
-
-            let currentCategory = {
-                "id": doc.id,
-                "name": doc.data().name,
-                "products": products
-            }
-            categoryBuffer.push(currentCategory);
+            categoryBuffer.push(doc.data());
           });
         
         setCategories(categoryBuffer);
     }
 
+    async function getProducts() {
+        const q = query(collection(db, "products"));
+
+        const querySnapshot = await getDocs(q);
+
+        let productsBuffer = []
+
+        querySnapshot.forEach((doc) => {
+            // doc.data() is never undefined for query doc snapshots
+            productsBuffer.push(doc.data());
+          });
+        
+        setProducts(productsBuffer);
+        
+    }
+
     return (
         <>
        <div className="page flex-col">
-            <div className="w-full h-20">
-                <Header title="products" />
-            </div>
-            <div className="flex flex-col w-full h-5/6 items-center pt-5">
-                <ProductHeader active={active} setActive={(active)=>setActive(active)}/>
-                <div className="flex flex-col w-98/100 mt-12">
-                    {categories.map(category => {
-                        console.log(category);
+            <div className="flex flex-col w-full h-5/6 items-center">
+                <ProductHeader activeTab={activeTab} setActiveTab={(activeTab)=>setActiveTab(activeTab)}/>
+                <ProductFilter />
+                <div className="flex flex-col w-98/100">
+                    {(categories.map(category => {
+
                         return (
-                            <ProductList category={category}/>
+                            <div key={category.name}>
+                                <ProductList category={category} products={products}/>
+                            </div>
                         )
-                    })}
+                    }))}
                 </div>
                 
             </div>
