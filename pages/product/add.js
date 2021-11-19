@@ -4,7 +4,7 @@ import React from "react";
 import Link from 'next/link'
 import ProductForm from "../../components/products/productForm";
 import ProductImages from "../../components/products/productImages";
-import {useState} from "react/cjs/react.development";
+import {useState} from "react";
 
 export default function Add() {
 
