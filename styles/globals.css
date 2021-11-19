@@ -33,15 +33,28 @@
   }
 
   .promo-button {
-    @apply w-2/3 justify-start shadow-inner items-center flex bg-lightPrimary hover:bg-primary hover:text-white text-white rounded-full p-1
-    transition-all duration-300 ease-out cursor-pointer;
+    @apply w-2/3 justify-start shadow-inner items-center flex bg-lightPrimary rounded-full p-1
+    hover:shadow-innerHover transition-all duration-300 ease-linear text-white cursor-pointer;
   }
 
   .action-button {
-    @apply bg-lightGray shadow-inner p-1 w-8 h-8 flex items-center justify-center text-darkGray rounded-full hover:bg-gray hover:text-lightGray transition-all duration-500 ease-out cursor-pointer;
+    @apply bg-lightGray shadow-inner p-1 w-8 h-8 flex items-center justify-center text-darkGray rounded-full hover:shadow-innerHover transition-all duration-300 ease-linear cursor-pointer;
   }
 
   .filter {
     @apply bg-white h-10 flex items-center justify-between pl-4 pr-4 rounded-full shadow-inner cursor-pointer;
+  }
+
+  .add-button {
+    @apply text-white bg-lightPrimary h-12 w-12 flex justify-center items-center rounded-full shadow-inner cursor-pointer hover:shadow-innerHover transition-all duration-300 ease-linear;
+  }
+
+  .back-button {
+    @apply w-12 h-12 cursor-pointer hover:shadow-innerHover shadow-inner rounded-full flex items-center justify-center;
+  }
+
+  .save-button {
+    @apply w-56 shadow-inner items-center bg-lightPrimary rounded-full p-1
+    hover:shadow-innerHover transition-all duration-300 ease-linear text-white cursor-pointer text-center flex justify-center;
   }
 }

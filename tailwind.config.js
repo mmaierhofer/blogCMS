@@ -9,7 +9,14 @@ module.exports = {
     extend: {
       width: {
         '98/100': '97%'
-      }
+      },
+      boxShadow: {
+        innerHover: 'inset 0px 6px 6px 0px rgba(0, 0, 0, 0.2)',
+      },
+      padding: {
+        '1/3': '33.33%',
+        full: '100%',
+      },
     },
     colors: {
       primary: '#22277A',
