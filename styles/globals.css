@@ -61,4 +61,8 @@
   .text-input {
     @apply h-12 appearance-none block w-full text-primary border border-primary rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white;
   }
+
+  .text-area {
+    @apply appearance-none block w-full border border-primary rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white h-40;
+  }
 }

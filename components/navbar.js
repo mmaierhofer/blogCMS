@@ -9,7 +9,6 @@ export default function Navbar() {
     const [logoutModuleIsActive, setLogoutModuleIsActive] = useState(false);
 
     const router = useRouter()
-    console.log(router.route);
 
     const getActiveStyle = (link) => {
 

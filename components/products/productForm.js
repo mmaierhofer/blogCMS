@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import DropDown from "./dropdown";
 
 export default function ProductForm({name, setName, price, setPrice, description, setDescription, gender, setGender, category, setCategory}) {
@@ -39,7 +39,7 @@ export default function ProductForm({name, setName, price, setPrice, description
             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
                 Description
             </label>
-            <textarea className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white h-40" id="grid-first-name" type="text" placeholder="Let people know whats great about your product"/>
+            <textarea  value={description} onChange={e=>(setDescription(e.target.value))} className="text-area" id="grid-first-name" type="text" placeholder="Let people know whats great about your product"/>
             </div>
         </div>
         </form>

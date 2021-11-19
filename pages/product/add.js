@@ -15,9 +15,6 @@ export default function Add() {
     const [gender, setGender] = useState();
     const [images, setImages] = useState();
 
-    useEffect(() => {
-        console.log(name);
-    }, [name])
 
     return (<>
         <div className="page flex items-center flex-col overflow-y-scroll pb-20">
@@ -46,7 +43,7 @@ export default function Add() {
                 
             </div>
             <div className="w-1/2 bg-white mt-12 shadow-lg flex flex-row h-96">
-            <ProductImages />
+            <ProductImages images={images} setImages={setImages}/>
                 
             </div>
             <div className="mt-5 w-1/2 flex justify-end ">
