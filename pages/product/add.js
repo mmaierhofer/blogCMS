@@ -4,8 +4,21 @@ import React from "react";
 import Link from 'next/link'
 import ProductForm from "../../components/products/productForm";
 import ProductImages from "../../components/products/productImages";
+import { useEffect, useState } from "react/cjs/react.development";
 
 export default function Add() {
+
+    const [name, setName] = useState("");
+    const [price, setPrice] = useState("");
+    const [description, setDescription] = useState("");
+    const [category, setCategory] = useState();
+    const [gender, setGender] = useState();
+    const [images, setImages] = useState();
+
+    useEffect(() => {
+        console.log(name);
+    }, [name])
+
     return (<>
         <div className="page flex items-center flex-col overflow-y-scroll pb-20">
             <div className="flex flex-col w-full items-center">
@@ -17,11 +30,22 @@ export default function Add() {
                 </div>
             </div>
 
-            <div class="w-1/2 bg-white mt-32 shadow-lg flex flex-row">
-                <ProductForm />
+            <div className="w-1/2 bg-white mt-32 shadow-lg flex flex-row">
+                <ProductForm 
+                    name={name}
+                    setName={setName}
+                    price={price}
+                    setPrice={setPrice}
+                    description={description}
+                    setDescription={setDescription}
+                    category={category}
+                    setCategory={setCategory}
+                    gender={gender}
+                    setGender={setGender}
+                />
                 
             </div>
-            <div class="w-1/2 bg-white mt-12 shadow-lg flex flex-row h-96">
+            <div className="w-1/2 bg-white mt-12 shadow-lg flex flex-row h-96">
             <ProductImages />
                 
             </div>

@@ -10,7 +10,7 @@ export default function ProductImages() {
             <div className="w-full h-96 p-8">
                 <div className="flex flex-col w-full">
                     <div className="w-full md:mb-0">
-                        <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                        <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                         Product Images
                         </label>
                     </div>

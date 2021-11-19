@@ -57,4 +57,8 @@
     @apply w-56 shadow-inner items-center bg-lightPrimary rounded-full p-1
     hover:shadow-innerHover transition-all duration-300 ease-linear text-white cursor-pointer text-center flex justify-center;
   }
+
+  .text-input {
+    @apply h-12 appearance-none block w-full text-primary border border-primary rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white;
+  }
 }
