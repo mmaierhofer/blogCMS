@@ -4,13 +4,13 @@ import React from "react";
 import Link from 'next/link'
 import ProductForm from "../../components/products/productForm";
 import ProductImages from "../../components/products/productImages";
-import { useEffect, useState } from "react/cjs/react.development";
+import {useState} from "react/cjs/react.development";
 
 export default function Add() {
 
-    const [name, setName] = useState("");
-    const [price, setPrice] = useState("");
-    const [description, setDescription] = useState("");
+    const [name, setName] = useState();
+    const [price, setPrice] = useState();
+    const [description, setDescription] = useState();
     const [category, setCategory] = useState();
     const [gender, setGender] = useState();
     const [images, setImages] = useState();
