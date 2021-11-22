@@ -3,7 +3,7 @@ import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react/cjs/react.development'
+import { useState } from 'react'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -12,8 +12,6 @@ function classNames(...classes) {
 export default function DropDown({options, selected, setSelected}) {
 
   const [show, setShow] = useState(false);
-
-  console.log(options, selected);
 
   if (options) {
     return (
