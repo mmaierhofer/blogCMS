@@ -2,6 +2,7 @@ import { faDotCircle, faEdit, faEuroSign, faPen, faPlus, faSquare, faTrash } fro
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { capitalizeFirstLetter } from '../../helper/utilityFunctions';
+import Link from 'next/link'
 
 export default function ProductList({category, products}) {
 
@@ -14,7 +15,7 @@ export default function ProductList({category, products}) {
                 {products.map(product => {
                     if(product.category == category.name){
                         return (
-                            <div className="listItem h-12 flex items-center justify-between">
+                            <div className="listItem h-12 flex items-center justify-between" key={product.name}>
                                 <div className="w-1/12"><input className="h-4 w-4" type="checkbox"/></div>
                                 <div className="flex justify-start w-1/12"><img className="h-8" src="https://assetsprx.matchesfashion.com/img/product/1300/1430983_1.jpg"></img></div>
                                 <div className="flex justify-start w-2/12">{product.name}</div>
@@ -27,7 +28,7 @@ export default function ProductList({category, products}) {
                                 <div className="flex justify-start w-2/12">
                                     <div className="promo-button"><div className="w-3/12 pl-2"><FontAwesomeIcon icon={faPlus}/></div> Promotion</div>
                                 </div>
-                                <div className="flex justify-end w-1/12"><div className="action-button"><FontAwesomeIcon icon={faPen}/></div></div>
+                                <div className="flex justify-end w-1/12"><Link href={`/product/${product.name}`}><div className="action-button"><FontAwesomeIcon icon={faPen}/></div></Link></div>
                                 <div className="flex justify-end w-12"><div className="action-button"><FontAwesomeIcon icon={faTrash}/></div></div>   
                             </div>
                         )

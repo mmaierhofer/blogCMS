@@ -2,6 +2,7 @@ import { faPlus, faRedoAlt, faSync, faTrash } from "@fortawesome/free-solid-svg-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import ImageUploading from 'react-images-uploading';
+import Image from 'next/image'
 
 export default function ImageUpload() {
 
@@ -48,7 +49,7 @@ export default function ImageUpload() {
             <div className="flex flex-row mt-8">
             {imageList.map((image, index) => (
               <div key={index} className="ml-5">
-                <img className="h-40" src={image['data_url']} alt="" height="150" />
+                <Image className="h-40" src={image['data_url']} alt="" height="150" width="150"/>
                 <div className="flex flex-row mt-5">
                   <div className="action-button" onClick={() => onImageUpdate(index)}><FontAwesomeIcon icon={faSync}/></div>
                   <button className="action-button" onClick={() => onImageRemove(index)}><FontAwesomeIcon icon={faTrash}/></button>

@@ -55,7 +55,7 @@
 
   .save-button {
     @apply w-56 shadow-inner items-center bg-lightPrimary rounded-full p-1
-    hover:shadow-innerHover transition-all duration-300 ease-linear text-white cursor-pointer text-center flex justify-center;
+    hover:shadow-innerHover transition-all duration-300 ease-linear text-white cursor-pointer text-center flex justify-center font-bold text-lg;
   }
 
   .text-input {

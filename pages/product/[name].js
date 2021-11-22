@@ -5,8 +5,9 @@ import Link from 'next/link'
 import ProductForm from "../../components/products/productForm";
 import ProductImages from "../../components/products/productImages";
 import {useState, useEffect} from "react";
-import { collection, query, getDocs, setDoc, doc } from "firebase/firestore";
+import { collection, query, getDocs, setDoc, doc, getDoc } from "firebase/firestore";
 import { db } from '../../firebase/clientApp'
+import { useRouter } from 'next/router'
 
 export default function Add() {
 
@@ -16,9 +17,14 @@ export default function Add() {
     const [category, setCategory] = useState();
     const [gender, setGender] = useState();
     const [images, setImages] = useState();
-    const [categories, setCategories] = useState()
+    const [categories, setCategories] = useState();
+    const [product, setProduct] = useState();
+
+    const router = useRouter();
 
     useEffect(() => {
+        
+        getProduct();
         getCategories();
     }, [])
 
@@ -36,6 +42,22 @@ export default function Add() {
         
         setCategories(categoryBuffer);
     }
+
+    async function getProduct() {
+        const q = query(doc(db, "products", router.query.name));
+
+        const querySnapshot = await getDoc(q);
+        let product = querySnapshot.data();
+        setName(product.name);
+        setPrice(product.price);
+        setDescription(product.description);
+        setCategory(product.category);
+        setGender(product.gender);
+
+        console.log(product);
+
+    }
+
 
     async function submit() {
 
@@ -57,7 +79,7 @@ export default function Add() {
                     <Link href="/products">
                     <div className="back-button"><FontAwesomeIcon icon={faChevronLeft}/></div>
                     </Link>
-                    <div className="ml-4">Add Product</div>
+                    <div className="ml-4">Edit {name}</div>
                 </div>
             </div>
 
