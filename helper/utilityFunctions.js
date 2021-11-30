@@ -8,3 +8,6 @@ export const capitalizeFirstLetter = (string) => {
     return "";
 }
 
+export const createRandomApiKey = () => {
+return(Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15));
+}
