@@ -3,7 +3,7 @@ import {useState} from 'react'
 import Login from '../components/auth/login'
 import Layout from '../components/layout'
 import { AuthContext, AuthProvider } from '../contexts/authContext';
-import { isEmpty } from '../helper/utilityFunctions';
+import SnackbarProvider from 'react-simple-snackbar'
 
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import LoadingScreen from '../components/loadingScreen/loadingScreen';
@@ -27,9 +27,11 @@ export default function MyApp({ Component, pageProps }) {
     if (user) {
       return (
         <AuthProvider>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
+           <SnackbarProvider>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </SnackbarProvider>
         </AuthProvider>
         
     )
