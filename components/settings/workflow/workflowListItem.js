@@ -9,7 +9,7 @@ import {
 
 export default function WorkflowListitem({ color, name, deleteWorkflow }) {
   return (
-    <>
+    <div key={name}>
       <div
         className="w-3/4 p-4 shadow-sm flex-row flex justify-between"
         key={name}
@@ -36,6 +36,6 @@ export default function WorkflowListitem({ color, name, deleteWorkflow }) {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
