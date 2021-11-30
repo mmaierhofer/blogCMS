@@ -98,10 +98,10 @@ export default function WorkflowSettings() {
                                 <div className="w-8/12 text-darkGray ">
                                     {workflowStep.name}
                                 </div>
-                                <div className="w-1/12" className="cursor-pointer">
+                                <div className="w-1/12 cursor-pointer">
                                     <FontAwesomeIcon icon={faCog} />
                                 </div>
-                                <div className="w-1/12" className="cursor-pointer" onClick={e => (deleteWorkflowStep(workflowStep.color))}>
+                                <div className="w-1/12 cursor-pointer" onClick={e => (deleteWorkflowStep(workflowStep.color))}>
                                     <FontAwesomeIcon icon={faTrash} />
                                 </div>
                             </div>
