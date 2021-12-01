@@ -157,7 +157,7 @@ export default function WorkflowSettings() {
               <DraggableList
                 items={workflow}
                 setItems={setWorkflow}
-                deleteWorkflow={(e) => deleteWorkflowStep(color)}
+                deleteWorkflow={(e) => deleteWorkflowStep(e)}
               />
             </div>
           </div>

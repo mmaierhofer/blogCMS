@@ -37,7 +37,7 @@ export default function DraggableList({ items, setItems, deleteWorkflow }) {
                         <WorkflowListitem
                           color={color}
                           name={name}
-                          deleteWorkflow={(e) => deleteWorkflow(color)}
+                          deleteWorkflow={(e) => deleteWorkflow(e)}
                         />
                       </li>
                     )}
