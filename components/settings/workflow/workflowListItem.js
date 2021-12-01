@@ -9,11 +9,8 @@ import {
 
 export default function WorkflowListitem({ color, name, deleteWorkflow }) {
   return (
-    <div key={name}>
-      <div
-        className="w-3/4 p-4 shadow-sm flex-row flex justify-between"
-        key={name}
-      >
+    <div className="w-full">
+      <div className="w-full p-4 border-b border-gray flex-row flex justify-between">
         <div className="w-4 text-darkGray cursor-pointer">
           <FontAwesomeIcon icon={faBars} />
         </div>

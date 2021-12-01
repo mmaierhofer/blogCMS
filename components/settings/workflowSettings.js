@@ -13,13 +13,13 @@ import { db } from "../../firebase/clientApp";
 import CustomColorPicker from "../colorPicker/CustomColorPicker";
 import { useSnackbar } from "react-simple-snackbar";
 import { SNACKBAR_OPTIONS_ERROR } from "../../helper/const";
-import WorkflowListitem from "./workflow/workflowListItem";
+import DraggableList from "./workflow/draggableList";
 
 export default function WorkflowSettings() {
   const [name, setName] = useState();
   const [workflow, setWorkflow] = useState([]);
   const [color, setColor] = useState("#90ee90");
-  const [openSnackbar, closeSnackbar] = useSnackbar(SNACKBAR_OPTIONS_ERROR);
+  const [openSnackbar] = useSnackbar(SNACKBAR_OPTIONS_ERROR);
   const [showColorPicker, setShowColorPicker] = useState(false);
 
   useEffect(() => {
@@ -153,15 +153,13 @@ export default function WorkflowSettings() {
             </div>
           </div>
           <div className="w-full flex flex-col items-center">
-            {workflow.map((workflowStage) => {
-              return (
-                <WorkflowListitem
-                  name={workflowStage.name}
-                  color={workflowStage.color}
-                  deleteWorkflow={(e) => deleteWorkflowStep(e)}
-                />
-              );
-            })}
+            <div className="w-3/4 items-center">
+              <DraggableList
+                items={workflow}
+                setItems={setWorkflow}
+                deleteWorkflow={(e) => deleteWorkflowStep(color)}
+              />
+            </div>
           </div>
         </div>
       </div>
