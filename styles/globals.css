@@ -17,7 +17,7 @@
   }
 
   .page {
-    @apply w-screen h-screen pl-16 bg-lightGray text-primary;
+    @apply w-screen min-h-screen pl-16 bg-lightGray text-primary;
   }
 
   .indicator {
@@ -54,7 +54,7 @@
   }
 
   .save-button {
-    @apply w-56 shadow-inner items-center bg-lightPrimary rounded-full p-1
+    @apply w-56 shadow-inner items-center bg-lightPrimary rounded-sm p-1
     hover:shadow-innerHover transition-all duration-300 ease-linear text-white cursor-pointer text-center flex justify-center font-bold text-lg;
   }
 

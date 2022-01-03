@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import WorkflowListitem from "./workflowListItem";
 
 export default function DraggableList({ items, setItems, deleteWorkflow }) {
+  const [editIsOpen, setEditIsOpen] = useState([]);
+
   function handleOnDragEnd(result) {
     if (!result.destination) return;
 
@@ -35,8 +37,11 @@ export default function DraggableList({ items, setItems, deleteWorkflow }) {
                         {...provided.dragHandleProps}
                       >
                         <WorkflowListitem
+                          editIsOpen={editIsOpen}
+                          setEditIsOpen={(e) => setEditIsOpen(e)}
                           color={color}
-                          name={name}
+                          workflowName={name}
+                          workflow={items}
                           deleteWorkflow={(e) => deleteWorkflow(e)}
                         />
                       </li>
