@@ -1,10 +1,16 @@
-import Header from '../components/header/header'
-import OpenOrdersWidget from '../components/home/openOrdersWidget'
-import OrderStatusWidget from '../components/home/orderStatusWidget'
-import ProductWidget from '../components/home/productWidget'
-import PrognoseWidget from '../components/home/prognoseWidget'
-import SalesWidget from '../components/home/salesWidget'
-import UsersWidget from '../components/home/usersWidget'
+import Header from "../components/header/header";
+import TinyWidget from "../components/home/tinyWidget";
+import OrderStatusWidget from "../components/home/orderStatusWidget";
+import ProductWidget from "../components/home/productWidget";
+import PrognoseWidget from "../components/home/prognoseWidget";
+import SalesWidget from "../components/home/salesWidget";
+import UsersWidget from "../components/home/usersWidget";
+import {
+  faAddressBook,
+  faAlignLeft,
+  faStickyNote,
+  faCheck,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   return (
@@ -14,14 +20,29 @@ export default function Home() {
       </div>
       <div className="flex flex-col w-full h-5/6">
         <div className="flex flex-row h-40">
-        <div className="w-1/3 p-5">
-            <OpenOrdersWidget number={"4"} title={"Open orders"}/>
+          <div className="w-1/3 p-5">
+            <TinyWidget
+              header={"Why you shouldn't overuse the useMemo hook"}
+              subtitle={"Current WIP"}
+              icon={faAlignLeft}
+              iconColor={"red"}
+            />
           </div>
           <div className="w-1/3 p-5">
-            <SalesWidget earnings={"420,50"} title={"Earnings this month"}/>
+            <TinyWidget
+              header={"Make a code example"}
+              subtitle={"Last Note"}
+              icon={faStickyNote}
+              iconColor={"yellow"}
+            />
           </div>
           <div className="w-1/3 p-5">
-            <SalesWidget earnings={"2059"} title={"Earnings this year"}/>
+            <TinyWidget
+              header={"15"}
+              subtitle={"Total Posts"}
+              icon={faCheck}
+              iconColor={"green"}
+            />
           </div>
         </div>
         <div className="flex flex-row w-full h-3/6">
@@ -42,5 +63,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-  )
+  );
 }

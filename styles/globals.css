@@ -17,7 +17,7 @@
   }
 
   .page {
-    @apply w-screen min-h-screen pl-16 bg-lightGray text-primary;
+    @apply w-screen min-h-screen pl-16 bg-background text-primary;
   }
 
   .indicator {
@@ -25,7 +25,7 @@
   }
 
   .widget {
-    @apply bg-white h-full shadow-md flex hover:shadow-xl cursor-pointer;
+    @apply bg-widget h-full shadow-md flex hover:shadow-xl cursor-pointer;
   }
 
   .listItem {
@@ -46,7 +46,7 @@
   }
 
   .add-button {
-    @apply text-white bg-lightPrimary h-12 w-12 flex justify-center items-center rounded-full shadow-inner cursor-pointer hover:shadow-innerHover transition-all duration-300 ease-linear;
+    @apply text-primary bg-secondary h-12 w-12 flex justify-center items-center rounded-full shadow-inner cursor-pointer hover:shadow-innerHover transition-all duration-300 ease-linear;
   }
 
   .back-button {
