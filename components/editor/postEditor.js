@@ -16,7 +16,7 @@ export default function PostEditor({ content, setContent }) {
         onEditorChange={setContent}
         value={content}
         init={{
-          height: 600,
+          height: 500,
           menubar: false,
           plugins: [
             "advlist autolink lists link image charmap print preview anchor",

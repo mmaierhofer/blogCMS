@@ -14,7 +14,7 @@ import {
 
 export default function Home() {
   return (
-    <div className="page flex-col">
+    <div className="page flex-col pl-16">
       <div className="w-full h-20">
         <Header title="anything" />
       </div>

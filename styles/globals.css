@@ -17,7 +17,7 @@
   }
 
   .page {
-    @apply w-screen min-h-screen pl-16 bg-background text-primary;
+    @apply w-screen min-h-screen pl-0 bg-background text-primary;
   }
 
   .indicator {
