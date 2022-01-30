@@ -5,6 +5,11 @@ import { darcula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function CustomIDE() {
   const [code, setCode] = useState("");
+
+  const onHandleClick = () => {
+    console.log("add Block");
+  };
+
   return (
     <div className="w-full p-10 h-full flex flex-col items-end">
       <div className="w-full text-xs h-full flex flex-row">
@@ -23,7 +28,12 @@ export default function CustomIDE() {
           </SyntaxHighlighter>
         </div>
       </div>
-      <div className="add-button w-32 font-bold">Add Block</div>
+      <div
+        className="add-button w-32 font-bold"
+        onClick={(e) => onHandleClick()}
+      >
+        Add Block
+      </div>
     </div>
   );
 }
