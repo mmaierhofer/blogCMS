@@ -1,6 +1,7 @@
 import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import CodeBlock from "./codeBlock";
 
 export default function CodeBlocks({ setShowDialog, codeBlocks }) {
   console.log(codeBlocks);
@@ -15,9 +16,13 @@ export default function CodeBlocks({ setShowDialog, codeBlocks }) {
           Code
         </div>
       </div>
-      <div>
+      <div className="mt-8">
         {codeBlocks.map((codeBlock) => {
-          return <div>{codeBlock}</div>;
+          return (
+            <div>
+              <CodeBlock />
+            </div>
+          );
         })}
       </div>
     </>
