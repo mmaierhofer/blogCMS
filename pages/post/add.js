@@ -12,6 +12,7 @@ export default function Add() {
   const [content, setContent] = useState("");
   const [title, setTitle] = useState("");
   const [showDialog, setShowDialog] = useState(false);
+  const [codeBlocks, setCodeBlocks] = useState([]);
 
   return (
     <>
@@ -29,7 +30,7 @@ export default function Add() {
             className="absolute w-1/2 h-2/3 top-40 bg-opacity-95 shadow-2xl z-50 blur-xl"
             style={{ background: "rgb(43, 43, 43)" }}
           >
-            <CustomIDE />
+            <CustomIDE setCodeBlocks={setCodeBlocks} codeBlocks={codeBlocks} />
           </div>
         ) : (
           <></>

@@ -3,11 +3,11 @@ import React, { useState } from "react";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import { darcula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
-export default function CustomIDE() {
+export default function CustomIDE({ setCodeBlocks, codeBlocks }) {
   const [code, setCode] = useState("");
 
   const onHandleClick = () => {
-    console.log("add Block");
+    setCodeBlocks([...CodeBlocks, code]);
   };
 
   return (
