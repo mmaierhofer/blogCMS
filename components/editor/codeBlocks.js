@@ -2,7 +2,8 @@ import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
-export default function CodeBlocks({ setShowDialog }) {
+export default function CodeBlocks({ setShowDialog, codeBlocks }) {
+  console.log(codeBlocks);
   return (
     <>
       <div className="add-button w-32 flex flex-row">
@@ -13,6 +14,11 @@ export default function CodeBlocks({ setShowDialog }) {
         >
           Code
         </div>
+      </div>
+      <div>
+        {codeBlocks.map((codeBlock) => {
+          return <div>{codeBlock}</div>;
+        })}
       </div>
     </>
   );

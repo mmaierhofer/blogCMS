@@ -64,7 +64,10 @@ export default function Add() {
             </div>
             <div className="w-1/4 pl-12">
               <div className="h-28"></div>
-              <CodeBlocks setShowDialog={setShowDialog} />
+              <CodeBlocks
+                setShowDialog={setShowDialog}
+                codeBlocks={codeBlocks}
+              />
             </div>
           </div>
         </div>

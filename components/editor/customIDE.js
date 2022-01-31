@@ -7,7 +7,7 @@ export default function CustomIDE({ setCodeBlocks, codeBlocks }) {
   const [code, setCode] = useState("");
 
   const onHandleClick = () => {
-    setCodeBlocks([...CodeBlocks, code]);
+    setCodeBlocks([...codeBlocks, code]);
   };
 
   return (

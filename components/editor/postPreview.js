@@ -4,8 +4,6 @@ import logo from "../../public/logo.png";
 import Image from "next/image";
 
 export default function PostPreview({ content, title }) {
-  console.log(content);
-
   return (
     <>
       <div className="flex flex-row justify-center h-full items-start">
