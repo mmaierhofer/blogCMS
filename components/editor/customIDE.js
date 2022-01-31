@@ -5,21 +5,29 @@ import { darcula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function CustomIDE({ setCodeBlocks, codeBlocks }) {
   const [code, setCode] = useState("");
+  const [title, setTitle] = useState("");
 
   const onHandleClick = () => {
-    setCodeBlocks([...codeBlocks, code]);
+    setCodeBlocks([...codeBlocks, { title: title, code: code }]);
   };
 
   return (
     <div className="w-full p-10 h-full flex flex-col items-end">
+      <div className="w-full">
+        <div className="text-white font-bold">Title</div>
+        <input
+          type="text"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          className="h-12 w-full font-bold pl-4"
+        />
+      </div>
       <div className="w-full text-xs h-full flex flex-row">
         <textarea
-          className="w-1/2 p-4 font-mono text-white"
+          className="w-1/2 p-4 font-mono mt-5"
           value={code}
-          autoFocus
           onChange={(e) => setCode(e.target.value)}
           rows={10}
-          style={{ background: "rgb(43, 43, 43)" }}
           spellCheck={false}
         />
         <div className="h-full w-1/2 overflow-y-auto">

@@ -5,8 +5,10 @@ import React, { useState } from "react";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import { darcula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
-export default function CodeBlock() {
+export default function CodeBlock({ codeBlock }) {
   const [show, setShow] = useState(false);
+
+  const { title, code } = codeBlock;
 
   return (
     <div className="w-3/4 bg-widget flex flex-col">
@@ -14,13 +16,13 @@ export default function CodeBlock() {
         className="w-full  text-white h-12 mt-2 flex justify-between pl-2 pr-2 items-center"
         onClick={(e) => setShow(!show)}
       >
-        <div>Code Block</div>
+        <div>{title}</div>
         <FontAwesomeIcon icon={faChevronDown} />
       </div>
       {show ? (
         <div className="h-content">
           <SyntaxHighlighter language="jsx" style={darcula}>
-            function def const
+            {code}
           </SyntaxHighlighter>
         </div>
       ) : (

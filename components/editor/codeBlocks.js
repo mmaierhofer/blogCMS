@@ -20,7 +20,7 @@ export default function CodeBlocks({ setShowDialog, codeBlocks }) {
         {codeBlocks.map((codeBlock) => {
           return (
             <div>
-              <CodeBlock />
+              <CodeBlock codeBlock={codeBlock} />
             </div>
           );
         })}
