@@ -11,9 +11,9 @@ export default function CodeBlock({ codeBlock }) {
   const { title, code } = codeBlock;
 
   return (
-    <div className="w-3/4 bg-widget flex flex-col">
+    <div className="w-3/4  flex flex-col">
       <div
-        className="w-full  text-white h-12 mt-2 flex justify-between pl-2 pr-2 items-center"
+        className="w-full  text-white bg-widget h-12 mt-2 flex justify-between pl-2 pr-2 items-center cursor-pointer"
         onClick={(e) => setShow(!show)}
       >
         <div>{title}</div>
