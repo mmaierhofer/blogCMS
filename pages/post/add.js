@@ -30,7 +30,11 @@ export default function Add() {
             className="absolute w-1/2 h-2/3 top-40 bg-opacity-95 shadow-2xl z-50 blur-xl"
             style={{ background: "rgb(43, 43, 43)" }}
           >
-            <CustomIDE setCodeBlocks={setCodeBlocks} codeBlocks={codeBlocks} />
+            <CustomIDE
+              setCodeBlocks={setCodeBlocks}
+              codeBlocks={codeBlocks}
+              setShowDialog={setShowDialog}
+            />
           </div>
         ) : (
           <></>

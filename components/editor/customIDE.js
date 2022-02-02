@@ -3,12 +3,17 @@ import React, { useState } from "react";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import { darcula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
-export default function CustomIDE({ setCodeBlocks, codeBlocks }) {
+export default function CustomIDE({
+  setCodeBlocks,
+  codeBlocks,
+  setShowDialog,
+}) {
   const [code, setCode] = useState("");
   const [title, setTitle] = useState("");
 
   const onHandleClick = () => {
     setCodeBlocks([...codeBlocks, { title: title, code: code }]);
+    setShowDialog(false);
   };
 
   return (
