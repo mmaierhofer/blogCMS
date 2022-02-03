@@ -16,7 +16,7 @@ export default function Add() {
 
   return (
     <>
-      <div className="page flex items-center flex-col pb-20 pl-20">
+      <div className="page flex items-center flex-col pb-20 pl-0">
         {showDialog ? (
           <div
             className="absolute w-full h-full top-0 bg-opacity-95 shadow-2xl bg-black z-10"
@@ -40,7 +40,7 @@ export default function Add() {
           <></>
         )}
 
-        <div className="flex flex-col w-full items-center">
+        <div className="flex flex-col w-full items-center pl-20">
           <div className="w-full pl-8 bg-primary text-white h-20 shadow-md flex items-center text-lg fixed z-20">
             <Link href="/products">
               <div className="back-button">
