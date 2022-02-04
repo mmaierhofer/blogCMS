@@ -7,6 +7,8 @@ export default function CustomIDE({
   setCodeBlocks,
   codeBlocks,
   setShowDialog,
+  content,
+  setContent,
 }) {
   const [code, setCode] = useState("");
   const [title, setTitle] = useState("");
@@ -14,6 +16,7 @@ export default function CustomIDE({
   const onHandleClick = () => {
     setCodeBlocks([...codeBlocks, { title: title, code: code }]);
     setShowDialog(false);
+    setContent(`${content} {{${title}}}`);
   };
 
   return (
