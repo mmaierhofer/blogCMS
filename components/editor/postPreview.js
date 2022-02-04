@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../public/logo.png";
 
 import Image from "next/image";
 
-export default function PostPreview({ content, title }) {
+export default function PostPreview({ content, title, codeBlocks }) {
+  const substitutePlaceholders = (content) => {
+    let previewContent = content;
+    console.log(content);
+
+    codeBlocks.forEach((codeBlock) => {
+      previewContent.replace(`{{${codeBlock.title}}}`, "Test");
+    });
+
+    return previewContent;
+  };
+
   return (
     <>
       <div className="flex flex-row justify-center h-full items-start">
-        <div className="bg-white w-80 h-full border-8 rounded-xl border-black pt-4">
+        <div className="bg-white w-80 h-600 border-8 rounded-xl border-black pt-4">
           <div className="h-20 w-full flex flex-col justify-center items-center pt-4">
             <div className="w-12">
               <Image src={logo} alt="logo" className="w-5 h-5" />
@@ -26,7 +37,9 @@ export default function PostPreview({ content, title }) {
             </div>
             <div
               className=" w-max-full w-fit text-justify pl-8 mt-4 pr-8 text-sm"
-              dangerouslySetInnerHTML={{ __html: content }}
+              dangerouslySetInnerHTML={{
+                __html: substitutePlaceholders(content),
+              }}
             />
           </div>
         </div>

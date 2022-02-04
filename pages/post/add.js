@@ -53,7 +53,11 @@ export default function Add() {
           </div>
           <div className="mt-32 flex w-full flex-row ">
             <div className="w-1/4">
-              <PostPreview content={content} title={title} />
+              <PostPreview
+                content={content}
+                title={title}
+                codeBlocks={codeBlocks}
+              />
             </div>
             <div className="w-1/2">
               <div className="text-white font-bold">Title</div>
@@ -63,10 +67,7 @@ export default function Add() {
                 onChange={(e) => setTitle(e.target.value)}
                 className="h-12 w-full font-bold pl-4"
               />
-              <div className="mt-5">
-                <div className="text-white font-bold">Content</div>
-                <PostEditor content={content} setContent={setContent} />
-              </div>
+              <div className="mt-5"></div>
             </div>
             <div className="w-1/4 pl-12">
               <div className="h-28"></div>

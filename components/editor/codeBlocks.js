@@ -4,7 +4,6 @@ import React from "react";
 import CodeBlock from "./codeBlock";
 
 export default function CodeBlocks({ setShowDialog, codeBlocks }) {
-  console.log(codeBlocks);
   return (
     <>
       <div className="add-button w-32 flex flex-row">
