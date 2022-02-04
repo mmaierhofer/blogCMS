@@ -34,6 +34,8 @@ export default function Add() {
               setCodeBlocks={setCodeBlocks}
               codeBlocks={codeBlocks}
               setShowDialog={setShowDialog}
+              setContent={setContent}
+              content={content}
             />
           </div>
         ) : (
