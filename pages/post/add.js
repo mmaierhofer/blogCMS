@@ -7,6 +7,7 @@ import PostEditor from "../../components/editor/postEditor";
 import PostPreview from "../../components/editor/postPreview";
 import CodeBlocks from "../../components/editor/codeBlocks";
 import CustomIDE from "../../components/editor/customIDE";
+import AddBlockButton from "../../components/editor/addBlockButton";
 
 export default function Add() {
   const [content, setContent] = useState("");
@@ -67,7 +68,9 @@ export default function Add() {
                 onChange={(e) => setTitle(e.target.value)}
                 className="h-12 w-full font-bold pl-4"
               />
-              <div className="mt-5"></div>
+              <div className="mt-5">
+                <AddBlockButton />
+              </div>
             </div>
             <div className="w-1/4 pl-12">
               <div className="h-28"></div>
