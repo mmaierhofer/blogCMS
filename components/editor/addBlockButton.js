@@ -5,6 +5,7 @@ export default function AddBlockButton() {
     <>
       <div>
         <div></div>
+        <div></div>
       </div>
     </>
   );
