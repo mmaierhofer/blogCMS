@@ -42,6 +42,8 @@ module.exports = {
     extend: {
       borderRadius: ["hover"],
       scale: ["active", "group-hover"],
+      margin: ["group-hover"],
+      width: ["group-hover"],
     },
   },
   plugins: [],

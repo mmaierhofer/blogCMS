@@ -16,6 +16,10 @@
       text-xs font-bold transition-all duration-100 origin-left transform scale-0 z-50;
   }
 
+  .crazy-add-button {
+    @apply w-8 h-8 bg-white transition-all duration-300 ease-linear cursor-pointer;
+  }
+
   .page {
     @apply w-screen min-h-screen pl-0 bg-background text-primary;
   }

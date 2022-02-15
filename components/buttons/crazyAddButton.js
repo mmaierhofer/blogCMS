@@ -5,18 +5,21 @@ import React from "react";
 export default function CrazyAddButton() {
   return (
     <>
-      <div>
+      <div className="group cursor-pointer ">
         <div className="absolute w-16 h-16 flex items-center justify-center text-2xl">
           <FontAwesomeIcon color="#1c2039" icon={faPlus} />
         </div>
-        <div className="flex flex-row">
-          <div className="w-8 h-8 rounded-tl-xl bg-white"></div>
-          <div className="w-8 h-8 rounded-tr-xl bg-white"></div>
+        <div className="flex flex-row z-50">
+          <div className="crazy-add-button group-hover:mr-4"></div>
+          <div className="crazy-add-button"></div>
         </div>
         <div className="flex flex-row">
-          <div className="w-8 h-8 rounded-bl-xl bg-white"></div>
-          <div className="w-8 h-8 rounded-br-xl bg-white"></div>
+          <div className="crazy-add-button group-hover:mt-4 group-hover:mr-4"></div>
+          <div className="crazy-add-button group-hover:mt-4 "></div>
         </div>
+      </div>
+      <div className="absolute w-16 h-16 flex items-center justify-center text-2xl">
+        <FontAwesomeIcon color="#1c2039" icon={faPlus} />
       </div>
     </>
   );
