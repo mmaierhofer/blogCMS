@@ -9,7 +9,7 @@ export default function CrazyAddButton() {
         <div className="absolute w-16 h-16 flex items-center justify-center text-2xl">
           <FontAwesomeIcon color="#1c2039" icon={faPlus} />
         </div>
-        <div className="flex flex-row z-50">
+        <div className="flex flex-row">
           <div className="crazy-add-button group-hover:mr-4"></div>
           <div className="crazy-add-button"></div>
         </div>
